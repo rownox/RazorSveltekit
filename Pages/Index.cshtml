@@ -1,0 +1,33 @@
+﻿@page
+@model IndexModel
+@{
+}
+
+<button id="change">Change</button>
+
+<div id="svelte-component-app"></div>
+<div id="svelte-component-counter"></div>
+
+@section Scripts {
+
+    <script>
+        var changeBtn = document.getElementById('change');
+
+        function updateButtonText(newText) {
+            changeBtn.textContent = newText;
+        }
+
+        changeBtn.addEventListener('click', function () {
+            if (changeBtn.textContent == document.querySelector('#svelte-component-counter p').textContent) {
+                changeBtn.textContent = "Change";
+            } else {
+                var pContent = document.querySelector('#svelte-component-counter p').textContent;
+                updateButtonText(pContent);
+            }
+        });
+
+        document.addEventListener('updateButtonText', function (event) {
+            updateButtonText(event.detail);
+        });
+    </script>
+}

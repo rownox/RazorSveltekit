@@ -1,0 +1,48 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="wwwroot\my-sveltekit-app\**" />
+    <Content Remove="wwwroot\my-sveltekit-app\**" />
+    <EmbeddedResource Remove="wwwroot\my-sveltekit-app\**" />
+    <None Remove="wwwroot\my-sveltekit-app\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="wwwroot\svelteapp\public\build\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="wwwroot\svelteapp\.gitignore" />
+    <None Include="wwwroot\svelteapp\public\favicon.png" />
+    <None Include="wwwroot\svelteapp\public\global.css" />
+    <None Include="wwwroot\svelteapp\public\index.html" />
+    <None Include="wwwroot\svelteapp\README.md" />
+    <None Include="wwwroot\svelteapp\rollup.config.js" />
+    <None Include="wwwroot\svelteapp\scripts\setupTypeScript.js" />
+    <None Include="wwwroot\svelteapp\src\App.svelte" />
+    <None Include="wwwroot\svelteapp\src\Counter.svelte" />
+    <None Include="wwwroot\svelteapp\src\main.js" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Properties\Resources.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+
+</Project>
