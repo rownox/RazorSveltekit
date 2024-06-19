@@ -19,10 +19,6 @@
 
   <ItemGroup>
     <None Include="wwwroot\svelteapp\.gitignore" />
-    <None Include="wwwroot\svelteapp\public\favicon.png" />
-    <None Include="wwwroot\svelteapp\public\global.css" />
-    <None Include="wwwroot\svelteapp\public\index.html" />
-    <None Include="wwwroot\svelteapp\README.md" />
     <None Include="wwwroot\svelteapp\rollup.config.js" />
     <None Include="wwwroot\svelteapp\scripts\setupTypeScript.js" />
     <None Include="wwwroot\svelteapp\src\App.svelte" />

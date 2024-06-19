@@ -1,4 +1,5 @@
 ﻿<!DOCTYPE html>
+
 <html lang="en">
     <head>
         <meta charset="utf-8" />
@@ -7,11 +8,13 @@
         <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
         <link rel="stylesheet" href="~/svelteapp/public/build/bundle.css">
     </head>
+
     <body>
         <nav>
             <a asp-area="" asp-page="/Index">Home</a>
             <a asp-area="" asp-page="/Privacy">Privacy</a>
         </nav>
+
         <main role="main">
             @RenderBody()
         </main>
