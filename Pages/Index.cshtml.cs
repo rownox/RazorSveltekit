@@ -9,8 +9,20 @@ namespace SvelteTest2.Pages {
             _logger = logger;
         }
 
-        public void OnGet() {
+        public List<Item> Items { get; set; }
 
+        public void OnGet() {
+            Items = new List<Item>
+            {
+                new Item { Name = "John Doe", Age = 30, Location = "New York" },
+                new Item { Name = "Jane Smith", Age = 25, Location = "San Francisco" }
+            };
+        }
+
+        public class Item {
+            public string Name { get; set; }
+            public int Age { get; set; }
+            public string Location { get; set; }
         }
     }
 }

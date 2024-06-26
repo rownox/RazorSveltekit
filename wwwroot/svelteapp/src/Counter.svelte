@@ -1,4 +1,5 @@
 <script>
+    export let items = [];
     import { onMount } from 'svelte';
     let showing = false;
 
@@ -22,10 +23,16 @@
 
 <main>
     <button on:click={toggleComponent}>Component</button>
-
     {#if showing}
         <div id="svelte-component-counter">
             <p>hi</p>
+            {#each items as item}
+                <li>
+                    <p>Name: {item.name}</p>
+                    <p>Age: {item.age}</p>
+                    <p>Location: {item.location}</p>
+                </li>
+            {/each}
             <button on:click={clickButton}>Click</button>
         </div>
     {/if}
