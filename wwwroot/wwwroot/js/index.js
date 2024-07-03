@@ -1,12 +1,9 @@
-// wwwroot/js/index.ts
-import Counter from '/svelteapp/public/build/bundle.js'; // Adjust path relative to wwwroot/js
-document.addEventListener('DOMContentLoaded', function () {
-    const target = document.getElementById('svelte-component-counter');
-    new Counter.default({
+import Counter from "/svelteapp/public/build/bundle.js";
+document.addEventListener("DOMContentLoaded", function () {
+    const target = document.getElementById("svelte-component-counter");
+    new Counter({
         target,
-        props: {
-        // props here if needed
-        }
+        props: {},
     });
 });
 //# sourceMappingURL=index.js.map

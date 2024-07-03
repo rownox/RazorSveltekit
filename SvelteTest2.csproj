@@ -14,11 +14,11 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Content Remove="wwwroot\js\newFile.ts" />
+    <Content Remove="wwwroot\js\index.js" />
   </ItemGroup>
 
   <ItemGroup>
-    <_ContentIncludedByDefault Remove="wwwroot\js\newFile.ts" />
+    <_ContentIncludedByDefault Remove="wwwroot\js\index.js" />
   </ItemGroup>
 
   <ItemGroup>
@@ -26,17 +26,13 @@
   </ItemGroup>
 
   <ItemGroup>
-    <None Include="wwwroot\js\index.ts" />
+    <None Include="wwwroot\js\index.js" />
     <None Include="wwwroot\svelteapp\.gitignore" />
     <None Include="wwwroot\svelteapp\rollup.config.js" />
     <None Include="wwwroot\svelteapp\scripts\setupTypeScript.js" />
     <None Include="wwwroot\svelteapp\src\App.svelte" />
     <None Include="wwwroot\svelteapp\src\Counter.svelte" />
     <None Include="wwwroot\svelteapp\src\main.js" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <TypeScriptCompile Include="wwwroot\js\newFile.ts" />
   </ItemGroup>
 
   <ItemGroup>

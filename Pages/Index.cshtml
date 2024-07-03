@@ -5,31 +5,28 @@
 
 <button id="change">Change</button>
 
-<div id="svelte-component-app"></div>
 <div id="svelte-component-counter"></div>
-<script src="~/js/index.ts" type="module"></script>
+<script src="~/js/index.js"></script>
+<script src="~/svelteapp/public/build/bundle.js"></script>
 
 
-@section Scripts {
+<script>
+    var changeBtn = document.getElementById('change');
 
-    <script>
-        var changeBtn = document.getElementById('change');
+    function updateButtonText(newText) {
+        changeBtn.textContent = newText;
+    }
 
-        function updateButtonText(newText) {
-            changeBtn.textContent = newText;
+    changeBtn.addEventListener('click', function () {
+        if (changeBtn.textContent == document.querySelector('#svelte-component-counter p').textContent) {
+            changeBtn.textContent = "Change";
+        } else {
+            var pContent = document.querySelector('#svelte-component-counter p').textContent;
+            updateButtonText(pContent);
         }
+    });
 
-        changeBtn.addEventListener('click', function () {
-            if (changeBtn.textContent == document.querySelector('#svelte-component-counter p').textContent) {
-                changeBtn.textContent = "Change";
-            } else {
-                var pContent = document.querySelector('#svelte-component-counter p').textContent;
-                updateButtonText(pContent);
-            }
-        });
-
-        document.addEventListener('updateButtonText', function (event) {
-            updateButtonText(event.detail);
-        });
-    </script>
-}
+    document.addEventListener('updateButtonText', function (event) {
+        updateButtonText(event.detail);
+    });
+</script>
