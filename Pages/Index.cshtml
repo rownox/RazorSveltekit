@@ -7,21 +7,12 @@
 
 <div id="svelte-component-app"></div>
 <div id="svelte-component-counter"></div>
+<script src="~/js/index.ts" type="module"></script>
+
 
 @section Scripts {
 
     <script>
-        import Counter from './svelteapp/build/bundle.js';
-
-        const items = @Html.Raw(Json.Serialize(Model.Items));
-
-        const app = new Counter({
-            target: document.getElementById('svelte-component-counter'),
-            props: {
-                items: items
-            }
-        });
-
         var changeBtn = document.getElementById('change');
 
         function updateButtonText(newText) {

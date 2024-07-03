@@ -1,0 +1,19 @@
+// wwwroot/tsconfig.json
+
+{
+  "compilerOptions": {
+    "module": "ESNext",
+    "target": "ESNext",
+    "esModuleInterop": true,
+    "moduleResolution": "node",
+    "strict": true,
+    "sourceMap": true,
+    "outDir": "wwwroot/js",
+    "baseUrl": ".", // Optional: Specify the base URL for module resolution
+    "paths": {
+      "/svelteapp/public/build/*": [ "./svelteapp/public/build/*" ] // Corrected path mapping
+    }
+  },
+  "include": [ "js/**/*.ts" ], // Include TypeScript files in the js directory and its subdirectories
+  "exclude": [ "node_modules" ]
+}
