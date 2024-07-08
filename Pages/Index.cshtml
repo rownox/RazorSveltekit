@@ -3,6 +3,8 @@
 @{
 }
 
+<input type="hidden" id="passInData" value="@ViewData["PassInJson"]" />
+
 <button id="change">Change</button>
 
 <div id="svelte-component-counter"></div>
@@ -11,6 +13,19 @@
 
 
 <script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const passInData = JSON.parse(document.getElementById('passInData').value);
+
+        import Counter from '~/svelteapp/src/Counter.svelte';
+
+        new Counter({
+            target: document.getElementById('svelte-component-counter'),
+            props: {
+                passIn: passInData
+            }
+        });
+    });
+
     var changeBtn = document.getElementById('change');
 
     function updateButtonText(newText) {

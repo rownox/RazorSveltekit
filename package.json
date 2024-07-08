@@ -1,8 +1,6 @@
 {
   "devDependencies": {
     "@sveltejs/adapter-static": "^3.0.2",
-    "@sveltejs/kit": "^2.5.18",
-    "@types/node": "^20.14.9",
-    "typescript": "^5.5.3"
+    "@sveltejs/kit": "^2.5.18"
   }
 }

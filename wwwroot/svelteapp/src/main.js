@@ -1,3 +1,11 @@
-import Counter from './Counter.svelte';
+//import Counter from './Counter.svelte';
+//function initSvelteComponents() {
 
-export default Counter;
+//    if (document.getElementById('svelte-component-counter')) {
+//        new Counter({
+//            target: document.getElementById('svelte-component-counter')
+//        });
+//    }
+//}
+
+//initSvelteComponents();
